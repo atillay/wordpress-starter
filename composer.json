@@ -1,0 +1,28 @@
+{
+  "name": "atillay/wordpress-starter",
+  "description": "WordPress starter",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "vlucas/phpdotenv": "~2.4",
+    "drupal-composer/preserve-paths": "0.1.*",
+    "johnpbloch/wordpress": "~4.9",
+    "wpackagist-plugin/advanced-custom-fields": "^5.7"
+  },
+  "extra": {
+    "wordpress-install-dir": "public",
+    "installer-paths": {
+      "public/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "public/wp-content/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "preserve-paths": [
+      "public/wp-config.php",
+      "public/wp-content/uploads",
+      "public/wp-content/themes/custom"
+    ]
+  }
+}

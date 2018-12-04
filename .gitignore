@@ -1,0 +1,15 @@
+# wp
+vendor/
+!public/
+public/*
+!public/wp-config.php
+!public/wp-content/
+public/wp-content/*
+!public/wp-content/themes/
+public/wp-content/themes/*
+!public/wp-content/themes/custom/
+
+# misc
+.DS_Store
+.env
+.idea/
