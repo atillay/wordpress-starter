@@ -1,4 +1,6 @@
 # WordPress starter
+> This is still a work in progress
+
 This stater is meant to avoid versioning dependencies like Wordpress Core and plugins
 
 ## Quickstart
