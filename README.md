@@ -1,4 +1,5 @@
 # WordPress starter
+This stater is meant to avoid versioning dependencies like Wordpress Core and plugins
 
 ## Quickstart
 - `$ cp .env.example .env` and configure it
