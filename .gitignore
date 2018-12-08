@@ -13,3 +13,4 @@ public/wp-content/themes/*
 .DS_Store
 .env
 .idea/
+var/
