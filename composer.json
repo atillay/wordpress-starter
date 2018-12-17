@@ -1,17 +1,17 @@
 {
   "name": "atillay/wordpress-starter",
   "description": "WordPress starter",
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://wpackagist.org"
-    }
-  ],
   "require": {
     "vlucas/phpdotenv": "~2.4",
     "drupal-composer/preserve-paths": "0.1.*",
-    "johnpbloch/wordpress": "~4.9",
-    "wpackagist-plugin/advanced-custom-fields": "^5.7"
+    "johnpbloch/wordpress": "~5.0",
+    "wpackagist-plugin/regenerate-thumbnails": "^3.0",
+    "advanced-custom-fields-pro": "^1.0"
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "rm -rf public/wp-content/themes/twenty*/"
+    ]
   },
   "extra": {
     "wordpress-install-dir": "public",
@@ -24,5 +24,23 @@
       "public/wp-content/uploads",
       "public/wp-content/themes/custom"
     ]
-  }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "advanced-custom-fields-pro",
+        "version": "1.0",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://github.com/wp-premium/advanced-custom-fields-pro/archive/master.zip"
+        }
+      }
+    }
+  ]
 }

@@ -3,6 +3,7 @@ vendor/
 !public/
 public/*
 !public/wp-config.php
+!public/.htaccess
 !public/wp-content/
 public/wp-content/*
 !public/wp-content/themes/

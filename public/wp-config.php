@@ -76,10 +76,11 @@ define('SMTP_PORT',   getenv('SMTP_PORT') ?: '25');                  // SMTP por
 define('SMTP_SECURE', getenv('SMTP_SECURE') ?: 'tls');               // Encryption system to use - ssl or tls
 
 /**#@-*/
+define('WPLANG', getenv('WP_LANG') ?: 'fr_FR');
 define('WP_DEFAULT_THEME', getenv('WP_THEME') ?: 'custom');
 define('WP_HOME', getenv('WP_URL') ?: 'http://' . $_SERVER['HTTP_HOST']);
 define('WP_SITEURL',getenv('WP_URL') ?: 'http://' . $_SERVER['HTTP_HOST']);
-define('DISALLOW_FILE_MODS', true); // disable theme/plugin install/update from admin panel
+define('DISALLOW_FILE_MODS', false); // Disable theme/plugin install/update from admin panel
 
 /**
  * WordPress Database Table prefix.
@@ -107,7 +108,7 @@ define('WP_DEBUG', boolval(getenv('WP_DEBUG')));
 
 /** Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )
-	define('ABSPATH', dirname(__FILE__) . '/');
+    define('ABSPATH', dirname(__FILE__) . '/');
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');

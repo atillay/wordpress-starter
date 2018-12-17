@@ -14,6 +14,13 @@ function send_smtp_email($mailer) {
     $mailer->FromName   = SMTP_NAME;
 }
 
+/** Save ACF fields into Json files for versioning */
+function my_acf_json_save_point() {
+    $path = get_stylesheet_directory() . '/acf-json';
+    return $path;
+}
+add_filter('acf/settings/save_json', 'my_acf_json_save_point');
+
 /** Helper to get any theme asset (also reads manifest.json for versioning) */
 function asset($path) {
     $manifest = @json_decode(file_get_contents(__DIR__ . '/build/manifest.json'), true);
