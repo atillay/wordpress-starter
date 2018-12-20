@@ -34,11 +34,11 @@
       "type": "package",
       "package": {
         "name": "advanced-custom-fields-pro",
-        "version": "1.0",
         "type": "wordpress-plugin",
+        "version": "5.7.9",
         "dist": {
           "type": "zip",
-          "url": "https://github.com/wp-premium/advanced-custom-fields-pro/archive/master.zip"
+          "url": "https://github.com/wp-premium/advanced-custom-fields-pro/archive/5.7.9.zip"
         }
       }
     }
