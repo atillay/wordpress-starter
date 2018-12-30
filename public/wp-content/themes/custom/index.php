@@ -1,8 +1,6 @@
 <?php get_header(); ?>
 
     <main>
-        <img src="<?= asset('build/images/ncage.jpg') ?>">
-
         <?php if (have_posts()): while (have_posts()): the_post(); ?>
             <article>
                 <header>

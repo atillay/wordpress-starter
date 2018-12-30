@@ -1,10 +1,10 @@
 version: '3'
 services:
 
-    app:
+    wp:
         image: atillay/wordpress
         ports:
-            - ${APP_PORT}:80
+            - ${WP_PORT}:80
         volumes:
             - .:/var/www:cached
 
