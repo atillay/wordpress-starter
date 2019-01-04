@@ -6,11 +6,17 @@
     "drupal-composer/preserve-paths": "0.1.*",
     "johnpbloch/wordpress": "~5.0",
     "wpackagist-plugin/regenerate-thumbnails": "^3.0",
-    "advanced-custom-fields-pro": "^1.0"
+    "advanced-custom-fields-pro": "^5.0"
   },
   "scripts": {
-    "post-install-cmd": [
+    "remove-default-themes": [
       "rm -rf public/wp-content/themes/twenty*/"
+    ],
+    "post-install-cmd": [
+      "@remove-default-themes"
+    ],
+    "post-update-cmd": [
+      "@remove-default-themes"
     ]
   },
   "extra": {
@@ -21,6 +27,7 @@
     },
     "preserve-paths": [
       "public/wp-config.php",
+      "public/.htaccess",
       "public/wp-content/uploads",
       "public/wp-content/themes/custom"
     ]
