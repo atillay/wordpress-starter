@@ -66,14 +66,15 @@ define('NONCE_SALT',       getenv('AUTH_KEY'));
 /**
  * Mail settings
  */
-define('SMTP_AUTH',   boolval(getenv('SMTP_AUTH')));                 // Use SMTP authentication (true|false)
-define('SMTP_USER',   getenv('SMTP_USER') ?: null);                  // Username to use for SMTP authentication
-define('SMTP_PASS',   getenv('SMTP_PASSWORD') ?: null);              // Password to use for SMTP authentication
-define('SMTP_HOST',   getenv('SMTP_HOST') ?: 'localhost');           // The hostname of the mail server
-define('SMTP_FROM',   getenv('SMTP_FROM') ?: 'no-reply@local.dev)'); // SMTP From email address
-define('SMTP_NAME',   getenv('SMTP_NAME') ?: 'John Doe');            // SMTP From name
-define('SMTP_PORT',   getenv('SMTP_PORT') ?: '25');                  // SMTP port number - likely to be 25, 465 or 587
-define('SMTP_SECURE', getenv('SMTP_SECURE') ?: 'tls');               // Encryption system to use - ssl or tls
+define('SMTP_AUTH',       boolval(getenv('SMTP_AUTH'))); // Use SMTP authentication (true|false)
+define('SMTP_USER',       getenv('SMTP_USER') ?: null); // Username to use for SMTP authentication
+define('SMTP_PASS',       getenv('SMTP_PASSWORD') ?: null); // Password to use for SMTP authentication
+define('SMTP_HOST',       getenv('SMTP_HOST') ?: 'localhost'); // The hostname of the mail server
+define('SMTP_FROM_EMAIL', getenv('SMTP_FROM_EMAIL') ?: 'no-reply@local.dev'); // SMTP From email address
+define('SMTP_FROM_NAME',  getenv('SMTP_FROM_NAME') ?: 'John Doe'); // SMTP From name
+define('SMTP_PORT',       getenv('SMTP_PORT') ?: '25'); // SMTP port number - likely to be 25, 465 or 587
+define('SMTP_ENCRYPTION', getenv('SMTP_ENCRYPTION') ?: null);  // Encryption system to use (ssl or tls)
+define('SMTP_AUTO_TLS',   getenv('SMTP_ENCRYPTION') === 'tls');  // AutoTLS
 
 /**#@-*/
 define('WPLANG', getenv('WP_LANG') ?: 'fr_FR');

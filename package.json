@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "npm run watch",
+    "watch": "encore dev --watch",
+    "build": "encore production"
+  },
+  "browserslist": [
+    ">0.25%",
+    "not op_mini all"
+  ],
+  "dependencies": {
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "@symfony/webpack-encore": "^0.22",
+    "autoprefixer": "^8.6.3",
+    "imagemin-gifsicle": "^6.0.1",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-pngquant": "^6.0.1",
+    "imagemin-svgo": "^7.0.0",
+    "imagemin-webpack-plugin": "^2.1.5",
+    "node-sass": "^4.10.0",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "webpack-livereload-plugin": "^2.2.0"
+  }
+}
