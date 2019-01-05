@@ -1,10 +1,5 @@
 const Encore           = require('@symfony/webpack-encore'),
-      LiveReloadPlugin = require('webpack-livereload-plugin'),
-      ImageminPlugin   = require('imagemin-webpack-plugin').default,
-      imageminMozjpeg  = require('imagemin-mozjpeg'),
-      imageminPngquant = require('imagemin-pngquant'),
-      imageminGifsicle = require('imagemin-gifsicle'),
-      imageminSvgo     = require('imagemin-svgo');
+      LiveReloadPlugin = require('webpack-livereload-plugin');
 
 Encore
     .setOutputPath('./public/wp-content/themes/custom/dist/')
@@ -18,16 +13,6 @@ Encore
     .enablePostCssLoader(() => ({plugins: [require('autoprefixer')]}))
 
     .copyFiles([{ from: './assets/images', to: 'images/[path][name].[ext]' }])
-    .addPlugin(new ImageminPlugin({
-        test: /\.(jpe?g|png|gif|svg)$/i,
-        disable: !Encore.isProduction(),
-        plugins: [
-            imageminMozjpeg({quality: 85, progressive: true}),
-            imageminPngquant({quality: 85}),
-            imageminGifsicle(),
-            imageminSvgo()
-        ]
-    }))
 
     .configureTerserPlugin(options => options.extractComments = true)
     .cleanupOutputBeforeBuild()
