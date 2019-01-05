@@ -5,18 +5,22 @@
     "vlucas/phpdotenv": "~2.4",
     "drupal-composer/preserve-paths": "0.1.*",
     "johnpbloch/wordpress": "~5.0",
-    "wpackagist-plugin/regenerate-thumbnails": "^3.0",
-    "advanced-custom-fields-pro": "^5.0"
+    "advanced-custom-fields-pro": "^5.0",
+    "wpackagist-plugin/force-regenerate-thumbnails": "^2.0",
+    "wpackagist-plugin/wordpress-importer": "^0.6.4",
+    "wpackagist-plugin/wp-exporter": "^0.0.6"
   },
   "scripts": {
-    "remove-default-themes": [
-      "rm -rf public/wp-content/themes/twenty*/"
+    "clean": [
+      "rm -rf public/wp-content/themes/twenty*",
+      "rm -rf public/wp-content/plugins/hello-dolly",
+      "rm -rf public/wp-content/plugins/akismet"
     ],
     "post-install-cmd": [
-      "@remove-default-themes"
+      "@clean"
     ],
     "post-update-cmd": [
-      "@remove-default-themes"
+      "@clean"
     ]
   },
   "extra": {
