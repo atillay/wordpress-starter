@@ -80,7 +80,7 @@ define('SMTP_AUTO_TLS',   getenv('SMTP_ENCRYPTION') === 'tls');  // AutoTLS
 define('WPLANG', getenv('WP_LANG') ?: 'fr_FR');
 define('WP_DEFAULT_THEME', getenv('WP_THEME') ?: 'custom');
 define('WP_HOME', getenv('WP_URL') ?: 'http://' . $_SERVER['HTTP_HOST']);
-define('WP_SITEURL',getenv('WP_URL') ?: 'http://' . $_SERVER['HTTP_HOST']);
+define('WP_SITEURL', getenv('WP_URL') ?: 'http://' . $_SERVER['HTTP_HOST']);
 define('DISALLOW_FILE_MODS', false); // Disable theme/plugin install/update from admin panel
 
 /**

@@ -22,8 +22,10 @@ add_filter('acf/settings/save_json', function () {
 
 /** Helper to get any theme asset (also reads manifest.json for versioning) */
 function asset($path) {
-    $manifest = @json_decode(file_get_contents(__DIR__ . '/dist/manifest.json'), true);
-    return isset($manifest[get_template_directory_uri() . '/' . $path])
-        ? $manifest[$path]
+    $manifest = @json_decode(file_get_contents(__DIR__ . '/../dist/manifest.json'), true);
+    $versionedPath = 'wp-content/themes/' . get_template() .  '/' . $path;
+    return isset($manifest[$versionedPath])
+        ? $manifest[$versionedPath]
         : get_template_directory_uri() . '/' . $path;
 }
+

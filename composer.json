@@ -13,7 +13,7 @@
   "scripts": {
     "clean": [
       "rm -rf public/wp-content/themes/twenty*",
-      "rm -rf public/wp-content/plugins/hello-dolly",
+      "rm -rf public/wp-content/plugins/hello.php",
       "rm -rf public/wp-content/plugins/akismet"
     ],
     "post-install-cmd": [
@@ -46,10 +46,10 @@
       "package": {
         "name": "advanced-custom-fields-pro",
         "type": "wordpress-plugin",
-        "version": "5.7.9",
+        "version": "5.7.10",
         "dist": {
           "type": "zip",
-          "url": "https://github.com/wp-premium/advanced-custom-fields-pro/archive/5.7.9.zip"
+          "url": "https://github.com/wp-premium/advanced-custom-fields-pro/archive/5.7.10.zip"
         }
       }
     }
