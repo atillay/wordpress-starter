@@ -9,7 +9,6 @@ public/wp-content/*
 !public/wp-content/themes/
 public/wp-content/themes/*
 !public/wp-content/themes/custom/
-public/wp-content/themes/custom/dist/
 
 # misc
 .DS_Store
