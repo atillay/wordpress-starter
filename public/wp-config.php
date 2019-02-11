@@ -5,7 +5,7 @@ require __DIR__ . '/../vendor/autoload.php';
 
 /** Load env variables */
 $dotenv = new Dotenv\Dotenv(__DIR__ . '/..');
-$dotenv->load();
+$dotenv->overload();
 
 /**
  * The base configuration for WordPress
