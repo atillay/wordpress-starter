@@ -5,7 +5,7 @@
     "vlucas/phpdotenv": "~2.4",
     "drupal-composer/preserve-paths": "0.1.*",
     "johnpbloch/wordpress": "~5.0",
-    "advanced-custom-fields-pro": "^5.0",
+    "advanced-custom-fields-pro": "dev-master",
     "wpackagist-plugin/force-regenerate-thumbnails": "^2.0",
     "wpackagist-plugin/wordpress-importer": "^0.6.4",
     "wpackagist-plugin/wp-exporter": "^0.0.6"
@@ -46,10 +46,11 @@
       "package": {
         "name": "advanced-custom-fields-pro",
         "type": "wordpress-plugin",
-        "version": "5.7.10",
+        "version": "master",
         "dist": {
           "type": "zip",
-          "url": "https://github.com/wp-premium/advanced-custom-fields-pro/archive/5.7.10.zip"
+          "url": "https://github.com/wp-premium/advanced-custom-fields-pro/archive/5.7.10.zip",
+          "reference": "master"
         }
       }
     }
