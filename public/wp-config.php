@@ -82,6 +82,7 @@ define('WP_DEFAULT_THEME', getenv('WP_THEME') ?: 'custom');
 define('WP_HOME', getenv('WP_URL') ?: 'http://' . $_SERVER['HTTP_HOST']);
 define('WP_SITEURL', getenv('WP_URL') ?: 'http://' . $_SERVER['HTTP_HOST']);
 define('DISALLOW_FILE_MODS', false); // Disable theme/plugin install/update from admin panel
+define('WP_AUTO_UPDATE_CORE', false); // Disable auto update core
 
 /**
  * WordPress Database Table prefix.
