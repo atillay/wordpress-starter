@@ -1,6 +1,4 @@
 # WordPress starter
-> This is still a work in progress
-
 Modern web development with Wordpress
 
 ## Features
